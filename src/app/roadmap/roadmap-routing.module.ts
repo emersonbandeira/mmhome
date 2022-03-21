@@ -7,7 +7,8 @@ import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
   { path: 'roadmap', redirectTo: 'roadmap/index', pathMatch: 'full'},
-  { path: 'roadmap/:roadmapId/index', component: ViewComponent },
+  { path: 'roadmap/index', component: IndexComponent },
+  { path: 'roadmap/:roadmapId/view', component: ViewComponent },
   { path: 'roadmap/create', component: CreateComponent },
   { path: 'roadmap/:roadmapId/edit', component: EditComponent }
 ];

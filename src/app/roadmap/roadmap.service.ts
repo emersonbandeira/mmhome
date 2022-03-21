@@ -39,7 +39,7 @@ export class RoadmapService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/roadmap/')
+    return this.httpClient.get(this.apiURL + '/posts/')
   
     .pipe(
       catchError(this.errorHandler)
@@ -53,7 +53,7 @@ export class RoadmapService {
    */
   create(roadmap:Roadmap): Observable<any> {
   
-    return this.httpClient.post(this.apiURL + '/roadmap/', JSON.stringify(roadmap), this.httpOptions)
+    return this.httpClient.post(this.apiURL + '/posts/', JSON.stringify(roadmap), this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
@@ -67,7 +67,7 @@ export class RoadmapService {
    */
   find(id:number): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/roadmap/' + id)
+    return this.httpClient.get(this.apiURL + '/posts/' + id)
   
     .pipe(
       catchError(this.errorHandler)
@@ -81,7 +81,7 @@ export class RoadmapService {
    */
   update(id:number, roadmap:Roadmap): Observable<any> {
   
-    return this.httpClient.put(this.apiURL + '/roadmap/' + id, JSON.stringify(roadmap), this.httpOptions)
+    return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(roadmap), this.httpOptions)
   
     .pipe( 
       catchError(this.errorHandler)
@@ -94,7 +94,7 @@ export class RoadmapService {
    * @return response()
    */
   delete(id:number){
-    return this.httpClient.delete(this.apiURL + '/roadmap/' + id, this.httpOptions)
+    return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
   
     .pipe(
       catchError(this.errorHandler)
