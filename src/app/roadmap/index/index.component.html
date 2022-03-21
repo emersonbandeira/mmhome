@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Angular 13 CRUD Example - ItSolutionStuff.com</h1>
+  
+    <a href="#" routerLink="/roadmap/create/" class="btn btn-success">Create New Roadmap</a>
+    
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let roadmap of roadmaps">
+        <td>{{ roadmap.id }}</td>
+        <td>{{ roadmap.title }}</td>
+        <td>{{ roadmap.body }}</td>
+        <td>
+          <a href="#" [routerLink]="['/roadmap/', roadmap.id, 'view']" class="btn btn-info">View</a>
+          <a href="#" [routerLink]="['/roadmap/', roadmap.id, 'edit']" class="btn btn-primary">Edit</a>
+          <button type="button" (click)="deleteRoadmap(roadmap.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </table>
+ </div>
