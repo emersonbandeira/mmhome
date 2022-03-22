@@ -39,11 +39,7 @@ export class RoadmapService {
    */
   getAll(): Observable<any> {
   
-    return this.httpClient.get(this.apiURL + '/posts/')
-  
-    .pipe(
-      catchError(this.errorHandler)
-    )
+    return this.httpClient.get(this.apiURL + '/posts/').pipe( catchError(this.errorHandler)    )
   }
     
   /**
