@@ -12,7 +12,7 @@ import { Roadmap } from './roadmap';
 })
 export class RoadmapService {
 
-  private apiURL = "https://jsonplaceholder.typicode.com";
+  private apiURL = "http://jsonplaceholder.typicode.com";
       
   /*------------------------------------------
   --------------------------------------------
