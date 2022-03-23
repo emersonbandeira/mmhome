@@ -12,8 +12,10 @@ import { Roadmap } from './roadmap';
 })
 export class RoadmapService {
 
-  private apiURL = "https://jsonplaceholder.typicode.com";
-      
+//  private apiURL = "https://jsonplaceholder.typicode.com";
+
+  private apiURL = "https://https://emersonbandeira.pythonanywhere.com/api/v1/resources/roadmaps/all";
+
   /*------------------------------------------
   --------------------------------------------
   Http Header Options
@@ -38,8 +40,10 @@ export class RoadmapService {
    * @return response()
    */
   getAll(): Observable<any> {
-  
-    return this.httpClient.get(this.apiURL + '/posts/').pipe( catchError(this.errorHandler)    )
+
+    //return this.httpClient.get(this.apiURL + '/posts/').pipe( catchError(this.errorHandler)    )
+
+    return this.httpClient.get(this.apiURL).pipe( catchError(this.errorHandler)    )
   }
     
   /**
