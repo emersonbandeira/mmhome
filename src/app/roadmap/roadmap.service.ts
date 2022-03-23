@@ -14,7 +14,7 @@ export class RoadmapService {
 
 //  private apiURL = "https://jsonplaceholder.typicode.com";
 
-  private apiURL = "https://https://emersonbandeira.pythonanywhere.com/api/v1/resources/roadmaps/all";
+  private apiURL = "https://emersonbandeira.pythonanywhere.com/api/v1/resources/roadmaps/all";
 
   /*------------------------------------------
   --------------------------------------------
